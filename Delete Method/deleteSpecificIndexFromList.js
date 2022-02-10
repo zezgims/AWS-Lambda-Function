@@ -9,7 +9,7 @@ exports.handler = async (event, context) => {
     let responseBody = {
         data: null,
         message: "",
-	      data2: null,
+	data2: null,
         message2: "",
         indexNo :null
     };
@@ -68,11 +68,11 @@ exports.handler = async (event, context) => {
     
     try {
         const data2 = await documentClient.update(params2).promise();
-	      statusCode = 200;
+	statusCode = 200;
         responseBody.data2 = JSON.stringify(data);
         responseBody.message2 = "Deleted selected value!";
     } catch(err) {
-	      statusCode = 403;
+	statusCode = 403;
         responseBody.message2 = "Not deleted selected value!";
     }
 
