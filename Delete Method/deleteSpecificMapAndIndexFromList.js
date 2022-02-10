@@ -1,4 +1,4 @@
-/* If the ID kept in the map selected based by primary key id satisfies the condition,it finds the index of the specified value of the list property 
+/* If the ID kept in the map selected based by primary key id satisfies the condition, it finds the index of the specified value of the list property 
 in the same map and deletes it. */
 
 "use strict";
