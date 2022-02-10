@@ -1,5 +1,5 @@
 /* If the ID kept in the map selected based by primary key id satisfies the condition,it finds the index of the specified value of the list property 
-in the same map and deletes it */
+in the same map and deletes it. */
 
 "use strict";
 const AWS = require("aws-sdk");
@@ -50,7 +50,7 @@ exports.handler = async (event, context) => {
       responseBody.message = "In cache, system error !"
     }
     
-    for(let i = 0 ; i<responseBody.data.length ; i++)
+    for(var i = 0 ; i<responseBody.data.length ; i++)
     {
         if(responseBody.data[i].mapID === mapID)
         {
@@ -59,7 +59,7 @@ exports.handler = async (event, context) => {
         }
     }
     
-    for(let j = 0 ; j<responseBody.data[responseBody.mapNo].Map_Attiribute_Name.length ; j++)
+    for(var j = 0 ; j<responseBody.data[responseBody.mapNo].Map_Attiribute_Name.length ; j++)
     {
         if(responseBody.data[responseBody.mapNo].Map_Attiribute_Name[j] === Deleted_Value)
         {
@@ -79,11 +79,11 @@ exports.handler = async (event, context) => {
     
     try {
         const data2 = await documentClient.update(params2).promise();
-	      statusCode = 200;
+	statusCode = 200;
         responseBody.data2 = JSON.stringify(data2);
         responseBody.message2 = "Deleted selected value!";
     } catch(err) {
-	      statusCode = 403;
+	statusCode = 403;
         responseBody.message2 = "Not deleted selected value!";
     }
    
