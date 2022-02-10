@@ -12,7 +12,7 @@ exports.handler = async (event, context) => {
         message: "",
         indexNo: null,
         mapNo: null,
-	      data2: null,
+	data2: null,
         message2: ""
     };
      
