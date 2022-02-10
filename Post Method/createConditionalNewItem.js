@@ -35,7 +35,7 @@ exports.handler = async (event, context) => {
         },
     };
     
-    if( Condition )
+    if( Condition )	// ex: userType == "teacher" or userType == "student"
     {
         try {
             const data = await documentClient.put(params).promise();
