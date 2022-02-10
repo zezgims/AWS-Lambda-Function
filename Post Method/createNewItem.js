@@ -29,11 +29,11 @@ exports.handler = async (event, context) => {
     
     try {
         const data = await documentClient.put(params).promise();
-	      statusCode = 200;
+	statusCode = 200;
         responseBody.data = JSON.stringify(data);
-	      responseBody.message = "Created new item!";
+	responseBody.message = "Created new item!";
     } catch(err) {
-	      statusCode = 403;
+	statusCode = 403;
         responseBody.message = "Not created new item!";
     }
     
