@@ -35,18 +35,18 @@ exports.handler = async (event, context) => {
 
     try {
         const data = await documentClient.update(params).promise();
-	      statusCode = 200;
+	statusCode = 200;
         responseBody.data = JSON.stringify(data);
-	      responseBody.message2 = "Added value!"; 
+	responseBody.message = "Added value!"; 
     } catch(err) {
         statusCode = 403;
-	      responseBody.message2 = "Not added value!"; 
+        responseBody.message = "Not added value!"; 
     }
 
     const response = {
         statusCode,
         headers,
-        body: JSON.stringify(responseBody.message2)
+        body: JSON.stringify(responseBody)
     };
 
     return response;
