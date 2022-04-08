@@ -46,7 +46,7 @@ exports.handler = async (event, context) => {
             }
         }
     } catch (e) {
-      responseBody.message = "In cache, system error !"
+        responseBody.message = "In cache, system error !"
     }
     
     for(let i = 0 ; i<responseBody.data.length ; i++)
