@@ -45,7 +45,7 @@ exports.handler = async (event, context) => {
             responseBody.message = "Not problem!";
         }
     } catch (e) {
-      responseBody.message = "In cache, system error!"
+        responseBody.message = "In cache, system error!"
     }
     
     const response = {
