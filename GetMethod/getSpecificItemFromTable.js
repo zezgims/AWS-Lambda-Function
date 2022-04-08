@@ -53,6 +53,6 @@ exports.handler = async (event, context) => {
         headers,
         body: JSON.stringify(responseBody)
     };
-
+    
     return response;
 };
