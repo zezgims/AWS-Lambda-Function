@@ -54,7 +54,7 @@ exports.handler = async (event, context) => {
             j = responseBody.temp.length + 1;
             try {
                 const data = await documentClient.put(params2).promise();
-	              statusCode = 200;
+	        statusCode = 200;
                 responseBody.data = JSON.stringify(data);
                 responseBody.message = "Created new item!";
             } catch(err) {
